@@ -4,12 +4,32 @@
  */
 package com.curso.shapes;
 
-import java.awt.Shape.Circle;
+import java.awt.Polygon;
 
 /**
  *
  * @author eibaneza
  */
-public class MyCircle {
-    private Circle shapee;
+public class MyCircle extends Polygon{
+    private double radius;
+    
+    public MyCircle(int x, int y, double radius){
+        this.addPoint(x, y);
+        this.radius = radius;
+    }
+    
+    
+    public double getRadius (){
+        return this.radius;
+    }
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+    
+    public double getPerimeter(){
+        return 2*Math.PI*this.radius;
+    }
+    public double getArea() {
+        return Math.PI*Math.pow(radius, 2);
+    }
 }
