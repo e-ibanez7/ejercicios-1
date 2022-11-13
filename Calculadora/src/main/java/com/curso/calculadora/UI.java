@@ -112,7 +112,7 @@ public class UI {
             default:
                 this.mainMenu();
         }
-        System.out.println("El resultado de la operación es" + ope.operation());
+        System.out.println("El resultado de la operación es " + ope.operation());
         System.out.println("Volviendo al Menú Principal...");
         this.mainMenu();
     }
